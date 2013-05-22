@@ -21,6 +21,17 @@
  * @since         CakePHP(tm) v 0.2.9
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
+
+/**
+ * TodosControllerのマッピングの設定を変更
+ */
+	Router::mapResources('todos');
+
+/**
+ * Accept Headerが”application/json”の場合にJsonViewに切り替わる
+ */
+	Router::parseExtensions('json');
+
 /**
  * Here, we are connecting '/' (base path) to controller called 'Pages',
  * its action called 'display', and we pass a param to select the view file

@@ -33,5 +33,14 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller
 {
-	public $components = array('DebugKit.Toolbar');
+	/**
+	 * RequestHandlerを有効に
+	 */
+	public $components = array('DebugKit.Toolbar', 'RequestHandler');
+
+	/**
+	 * JsonViewをViewクラスとして使う
+	 * @var unknown_type
+	 */
+	public $viewClass = 'Json';
 }
